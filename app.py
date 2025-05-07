@@ -33,7 +33,7 @@ init_db()
 def home():
     return render_template("index.html")
 
-@app.route("/signup", methods=["POST"])
+@app.route("/signin", methods=["POST"])
 def signup():
     data = request.get_json()
     name = data.get("name")
