@@ -91,7 +91,7 @@ async function handleLogin() {
   }
 
   try {
-    const response = await fetch("/login", {
+    const response = await fetch("https://perichat-kon6.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username: user, password: pass })
@@ -129,7 +129,7 @@ async function handleSignup() {
   }
 
   try {
-    const response = await fetch("/signin", {
+    const response = await fetch("https://perichat-kon6.onrender.com/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password: pass, confirm_password: cpass })
@@ -186,7 +186,7 @@ function sendMessage() {
   userMsg.textContent = message;
   currentConversation.appendChild(userMsg);
 
-  fetch("/chat", {
+  fetch("https://perichat-kon6.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message })
